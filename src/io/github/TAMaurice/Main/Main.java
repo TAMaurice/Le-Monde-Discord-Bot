@@ -11,8 +11,6 @@ public class Main extends ListenerAdapter {
 
 	public static JDABuilder builder;
 	public static String prefix = "~";
-	public String ServerID = "807677506190573568";
-	public String ChannelID = "826807119176794123";
 	
 	public String title = "Le Monde - The weekly newspaper of the Republic!";
 	
@@ -32,7 +30,7 @@ public class Main extends ListenerAdapter {
 	public static void main(String[] args) throws LoginException {
 		
 		
-		builder = JDABuilder.createDefault(BotToken.token);
+		builder = JDABuilder.createDefault(PrivateStrings.token);
 		builder.setStatus(OnlineStatus.ONLINE);
 		builder.setActivity(Activity.watching("the latest News!"));
 
@@ -55,7 +53,7 @@ public class Main extends ListenerAdapter {
 			info.addField(subtitle2, text2, false);
 			info.setColor(0x4287f5);
 			info.setFooter("Your Le Monde");
-			event.getJDA().getGuildById(ServerID).getTextChannelById(ChannelID).sendMessage(info.build()).queue();
+			event.getJDA().getGuildById(PrivateStrings.ServerID).getTextChannelById(PrivateStrings.ChannelID).sendMessage(info.build()).queue();
 			info.clear();
 		}
 	}

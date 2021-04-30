@@ -12,7 +12,7 @@
 
 # Custom #
 .bin/
-BotToken.java
+PrivateStrings.java
 
 # Package Files #
 *.jar
