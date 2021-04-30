@@ -23,7 +23,7 @@ public class Main extends Application {
 	}
 	
 	public void start(Stage primaryStage) {
-		primaryStage.setTitle(Variables.BotName + " GUI");
+		primaryStage.setTitle(Variables.BOT_NAME + " GUI");
 
 		
 		GridPane grid = new GridPane();
